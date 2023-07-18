@@ -1,0 +1,568 @@
+body {
+    background: #222831;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Phosphate';
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 1.335rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+h2,
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 1.4rem 0
+}
+
+p,
+span {
+    font-family: 'Skia';
+    font-size: 1.125rem;
+    line-height: 1.65;
+    margin: 1.125rem 0;
+}
+
+a {
+    color: inherit;
+    text-underline-position: under;
+}
+
+header,
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #393E46;
+    color: #EEEEEE;
+    padding: 1rem 2rem;
+}
+
+header>div,
+footer>div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+header h1>a {
+    text-decoration: none;
+}
+
+
+/*  404 */
+.error {
+    color: #EEEEEE;
+    margin: auto;
+    text-align: center;
+    padding: 5rem;
+}
+
+.error h2 {
+    font-family: 'Phosphate';
+    font-size: 5rem;
+}
+
+
+/*  Login && Register   */
+.register,
+.login,
+.reset {
+    color: #EEEEEE;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.register h2,
+.login h2,
+.reset h2 {
+    font-family: 'Skia';
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.form-box {
+    margin-top: 3rem;
+}
+
+label {
+    display: block;
+    font-family: 'Skia';
+    font-size: 1.125rem;
+    color: #EEEEEE;
+    line-height: 1.65;
+    width: 16rem;
+}
+
+input {
+    display: block;
+    font-family: 'Skia';
+    font-size: 1.125rem;
+    background: none;
+    color: #EEEEEE;
+    outline: none;
+    border: 1px solid #393E46;
+    border-radius: 0.1rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0 1.125rem;
+    width: 16rem;
+}
+
+button {
+    font-family: 'Skia';
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #393E46;
+    border-radius: 0.3rem;
+    color: #EEEEEE;
+    background: #00ADB5;
+}
+
+select {
+    background: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    font-family: 'Skia';
+    font-size: 1.125rem;
+    margin: 1rem 0 2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #393E46;
+    border-radius: 0.3rem;
+    color: #EEEEEE;
+}
+
+/*  Toast   */
+.toast {
+    font-family: 'Skia';
+    font-size: 1.125rem;
+    position: fixed;
+    color: #EEEEEE;
+    background: #00ADB5;
+    border-radius: 5px;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    opacity: 0;
+    padding: 0.8rem 1.3rem;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/*  Admin & User Dashboard   */
+.dashboard {
+    color: #EEEEEE;
+    margin: auto;
+    padding: 3rem;
+}
+
+.dashboard h2 {
+    font-family: 'Skia';
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2rem;
+}
+
+
+.dashboard h3 {
+    font-family: 'Skia';
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.dashboard h4 {
+    font-family: 'Skia';
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    margin: 1rem 0 0.5rem;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.dashboard a {
+    font-family: 'Skia';
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 1px solid #222831;
+    border-radius: 0.4rem;
+    background: #393E46;
+}
+
+.dashboard a:hover {
+    background: #2b2f36;
+}
+
+.dashboard .two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.dashboard .two-column .column1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+
+.edit-order label,
+.edit-role label {
+    display: inline-block;
+    width: fit-content;
+    font-family: 'Skia';
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.edit-order select,
+.edit-role select {
+    margin: 0 0.5rem;
+    padding: 0.4rem 1rem;
+}
+
+
+/*  Dashboard - Category && Product   */
+.product input[name=category] {
+    cursor: pointer;
+    caret-color: transparent;
+    width: 8rem;
+}
+
+.product input[name=image] {
+    display: none;
+}
+
+.active {
+    background: #2b2f36 !important;
+}
+
+.product img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1.125rem;
+}
+
+.product span {
+    font-size: 1rem;
+}
+
+.product-create>a {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 1.125rem 0;
+    padding: 0.5rem;
+}
+
+.category-create button {
+    margin: 0;
+}
+
+.category-create input {
+    width: fit-content;
+    margin: 0;
+}
+
+.category-create {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product .product-create,
+.category .category-create {
+    margin-bottom: 2rem;
+}
+
+.category .categories-head>*,
+.category .categories-body>*,
+.product .product-head>*,
+.product .product-body>* {
+    display: inline-block;
+    width: 49%;
+}
+
+.categories-button>*,
+.product-button>* {
+    text-align: center;
+    width: 4.5rem;
+    display: inline-block;
+}
+
+.categories-button>a,
+.product-button>a {
+    padding: 0.5rem 0;
+}
+
+/*  Products */
+.products {
+    color: #EEEEEE;
+    padding: 3rem;
+}
+
+.products h2 {
+    font-family: 'Skia';
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.products h3 {
+    font-family: 'Skia';
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    line-height: 1.3;
+}
+
+.products img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.products-container {
+    flex: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 5rem;
+    color: #EEEEEE;
+}
+
+.product-container {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #393E46;
+    padding-top: 1rem;
+    width: 220px;
+    height: fit-content;
+}
+
+.products>.category,
+.products>.price,
+.products>.search {
+    display: flex;
+}
+
+.pagination a {
+    font-family: 'Skia';
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 1px solid #393E46;
+    border-radius: 0.4rem;
+    background: none;
+}
+
+/*  Product    */
+.product-detail {
+    color: #EEEEEE;
+    padding: 3rem 1rem 3rem;
+    margin: auto;
+    text-align: center;
+}
+
+.product-detail h2 {
+    font-family: 'Skia';
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.product-detail div {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #393E46;
+    padding: 1rem 0 1rem;
+    width: 50vw;
+}
+
+.product-detail img {
+    object-fit: contain;
+    width: 90%;
+    height: auto;
+}
+
+.product-detail h3 {
+    font-family: 'Skia';
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.product-detail a {
+    display: block;
+    font-family: 'Skia';
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 1px solid #393E46;
+    border-radius: 0.4rem;
+    margin: 1rem;
+}
+
+.product-detail a:hover {
+    background: #2b2f36;
+}
+
+
+/* Cart & checkout */
+.cart,
+.checkout {
+    color: #EEEEEE;
+    padding: 3rem 1rem 3rem;
+    margin: auto;
+    text-align: center;
+}
+
+.cart h2,
+.checkout h2 {
+    font-family: 'Skia';
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    text-align: center;
+}
+
+.cart h3 {
+    font-family: 'Tahoma';
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.cart a {
+    display: block;
+    font-family: 'Skia';
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 1px solid #393E46;
+    border-radius: 0.4rem;
+    margin: 1rem;
+}
+
+.cart a:hover {
+    background: #2b2f36;
+}
+
+.checkout .braintree-upper-container {
+    width: 50%;
+    margin: auto;
+}
+
+.checkout .braintree-sheet__text,
+.checkout .braintree-form__label {
+    color: #eee !important;
+    font-family: 'Skia';
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    margin: auto;
+    display: inline;
+    position: static;
+}
+
+.checkout .braintree-option,
+.checkout .braintree-card,
+.checkout .braintree-form-expiration,
+.checkout .braintree-form-number,
+.checkout .braintree-large-button,
+.checkout .braintree-paypal {
+    color: #eee;
+    background: #222831;
+    border: 1px solid #393E46 !important;
+}
+
+.checkout .braintree-option__label {
+    color: #eee;
+    font-family: 'Skia';
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.checkout .braintree-large-button {
+    width: 50%;
+}
+
+.checkout .braintree-large-button span {
+    border: none;
+}
+
+.checkout .braintree-large-button:hover {
+    background: #2b2f36;
+}
+
+.checkout .braintree-dropin>.braintree-heading {
+    display: none;
+}
+
+/*  Home   */
+.home {
+    color: #EEEEEE;
+    margin: auto;
+    padding: 3rem;
+}
+
+.home h2 {
+    font-family: 'Skia';
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2rem;
+}
+
+.home h3 {
+    font-family: 'Skia';
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
